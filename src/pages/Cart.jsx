@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { Link } from "react-router-dom";
+import SwipeableBottomSheet from 'react-swipeable-bottom-sheet';
+
 
 // import { typeScale } from '../utils/typography';
 import { typeScale, primaryFont, typography } from "../utils";
@@ -25,22 +27,19 @@ const CartNav = styled.div`
         display: inline-block; 
         background-color: ${props => props.theme.primaryWhite};
         border-radius: 9px;
-        padding: 10px;
-        padding-bottom: 0px;
-        padding-top: 6px;
+        padding: 10px; 
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-        & svg { 
-        width: 0.5rem; 
-        height: 0.5rem;
-       }
+        img {
+            height: 1rem;
+        }
     }
     
-    & svg { 
-        width: 0.9rem; 
-    }
-    h3 {
-        transform: translateX(4rem);
-    }
+    
+    h3 { 
+        display: flex;
+        justify-content: center;
+        flex: 1;
+    }   
 `;
 
 const ItemImage = styled.div`  
@@ -54,7 +53,7 @@ const ItemImage = styled.div`
     background-position: center center; 
  `;
 const ItemDes = styled.div`
-    
+    flex-grow: 1;
     h5 {
         font-size: 11px;
     word-spacing: -1px;
@@ -73,6 +72,9 @@ const ItemDes = styled.div`
 const ItemButton = styled.div`
 
     margin-left: -2rem;
+    margin-right: 0.5rem;
+
+
     & > div:nth-child(1){
         width: 1rem;
         height: 1rem;
@@ -83,7 +85,88 @@ const ItemButton = styled.div`
     }
 `;
 
+const SwipeSection = styled.div`
+    display  : flex;
+
+
+`;
+
+const styles = {
+    title: {
+        padding: '6px 0px',
+        minHeight: '64px',
+        fontSize: '14px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    text: {
+        padding: '10px',
+        boxSizing: 'border-box',
+        backgroundColor: 'white',
+        fontSize: '18px',
+        minHeight: '50vh'
+    }
+};
+
+const Input = styled.input`
+  width: 80%;
+  height: 33px; 
+  border: 1px solid ${typography[200]};
+  padding-left: 8px;
+  font-family: ${primaryFont};
+  border-radius: 10px;
+  color: ${props => props.theme.textOnFormElementBackground};
+  font-weight: bold;
+
+  &:focus-visible { 
+    outline: transparent;
+    border: 1px solid ${props => props.theme.primaryColor};
+  }
+`;
+
+const PromoImg = styled.img`
+    height: 2rem; 
+`;
+
+const ReciptSection = styled.section`
+    
+    justify-content: end;
+    padding-block: 0.8rem;
+    border-bottom: 1px solid #dddee0;
+    & > div {
+        display: flex;
+        display: flex;
+        p {
+            font-weight: bold;
+            flex: 1;
+        }
+
+        & > div {
+            flex: 1;
+            display: flex;
+            justify-content: end;
+
+            p {
+                font-weight: bold;
+                text-align: end;
+                margin-right: 3px;
+            }
+            span {
+                color: ${props => props.theme.textOnDisabled};
+            }
+        }
+    }
+`;
+
 function Cart() {
+
+    const [barStatus, setBarStatus] = useState(false);
+
+    const togglePromo = () => {
+        setBarStatus((state) => !state);
+    };
+
     return (
 
         <React.Fragment>
@@ -92,7 +175,10 @@ function Cart() {
                 <CartNav>
 
                     <div>
-                        <Link to="/home"> <BackIcon /></Link>
+                        <Link to="/home">
+                            <PromoImg onClick={togglePromo} src='/images/icon/back.png' />
+                        </Link>
+
                     </div>
 
                     <h3>Cart</h3>
@@ -100,7 +186,7 @@ function Cart() {
                 </CartNav>
 
                 <div className='flex flex-col gap-1' >
-                    <div className='flex gap-0-5'>
+                    <div className='flex gap-0-5' style={{ 'boxShadow': 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px' }}>
 
                         <ItemImage url="/images/resturants/macdonalt.png">
 
@@ -129,7 +215,7 @@ function Cart() {
                         </ItemButton>
 
                     </div>
-                    <div className='flex gap-0-5'>
+                    <div className='flex gap-0-5' style={{ 'boxShadow': 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px' }}>
 
                         <ItemImage url="/images/resturants/macdonalt.png">
 
@@ -157,137 +243,110 @@ function Cart() {
                             </div>
                         </ItemButton>
 
-                    </div> 
+                    </div>
 
                 </div>
 
 
-                
+                <div className='mb-20 mt-1'>
+                    <ReciptSection>
+
+                        <div>
+                            <p>Subtotal</p>
+
+                            <div>
+                                <p>$27.30</p>
+                                <span>USD</span>
+                            </div>
+                        </div>
+                    </ReciptSection>
+
+                    <ReciptSection>
+
+                        <div>
+                            <p>Tax and Fees</p>
+
+                            <div>
+                                <p>$27.30</p>
+                                <span>USD</span>
+                            </div>
+                        </div>
+                    </ReciptSection>
+                    <ReciptSection>
+
+                        <div>
+                            <p>Delivery</p>
+
+                            <div>
+                                <p>$27.30</p>
+                                <span>USD</span>
+                            </div>
+                        </div>
+                    </ReciptSection>
+
+                    <ReciptSection>
+
+                        <div>
+                            <p>Total</p>
+
+                            <div>
+                                <p>$27.30</p>
+                                <span>USD</span>
+                            </div>
+                        </div>
+                    </ReciptSection>
+
+                    <div className='flex justify-center mt-1'>
+                        <PrimaryButton >
+                            CHECKOUT
+                        </PrimaryButton>
+                    </div>
+                </div>
+
+
+
+
+                <SwipeableBottomSheet
+                    overflowHeight={55}
+                    open={barStatus}
+                    onChange={togglePromo}
+                >
+                    <div style={styles.title}>
+                        <p>Promo Code Apply</p>
+
+                        {
+                            barStatus ? <PromoImg onClick={togglePromo} src='/images/icon/close.png' />
+                                : <PromoImg onClick={togglePromo} src='/images/icon/promocode.png' />
+                        }
+
+
+
+                        {/* <PrimaryButton onClick={() => {
+                            setBarStatus((state) => !state);
+                        }}>
+                            {barStatus ? 'Close' : 'Open'}
+                        </PrimaryButton> */}
+                    </div>
+
+
+                    <div style={styles.text}>
+                        <div className='items-center' style={{ display: "flex", flexDirection: "row", marginTop: "16px" }}>
+
+                            <Input id="email" type="text" placeholder="Enter Code" />
+
+                            <PromoImg onClick={togglePromo} src='/images/icon/apply-code.png' />
+
+                        </div>
+                    </div>
+                </SwipeableBottomSheet>
+
             </div>
 
 
 
-            {/* <div className='p-1'>
-
-                <div>
-                    <Link to="/home"> <BackIcon /></Link>
-
-                </div>
-
-                <CardBody url="/images/resturants/macdonalt.png">
-
-                    <div>
-                        <Link to="/home"> <BackIcon /></Link>
-
-                    </div>
-
-                    <div>
-                        <HeartIcon />
-                    </div>
-
-                </CardBody>
-
-                <h2>Ground Beef Tacos</h2>
-
-                <ReviewSection>
-                    <div>
-                        <StarIcon />
-                    </div>
-                    <p>
-                        4.5
-                    </p>
-                    <p>
-                        (30+)
-                    </p>
-
-                    <p>
-                        See Review
-                    </p>
-                </ReviewSection>
-
-                <FoodQuantity>
-
-                    <div>
-                        <p>
-                            $
-                        </p>
-                        <h1>
-                            9.50
-                        </h1>
-                    </div>
-                    <div>
-                        <div>
-                            <img src="/images/icon/minus.png" />
-                        </div>
-                        <h2>05</h2>
-                        <div>
-                            <img src="/images/icon/plus.png" />
-                        </div>
-                    </div>
-                </FoodQuantity>
-
-                <p>
-                    Brown the beef better. Lean ground beef – I like to use 85% lean angus. Garlic – use fresh  chopped. Spices – chili powder, cumin, onion powder.
-                </p>
-
-                <h3>Choice of Add On</h3>
-
-                <form>
-                    <div className='flex justify-between items-center'>
-
-                        <div className='flex items-center gap-1'>
-                            <img src="/images/foods/peper.png" alt="" srcset="" />
-                            <span className='nowrap'>Pepper  Julienned</span>
-                        </div>
 
 
-                        <div className='flex items-center gap-1'>
-                            <h5>+$2.30</h5>
-                            <input type="radio" name="radio" checked />
-                        </div>
-                    </div>
-
-                    <div className='flex justify-between items-center'>
-
-                        <div className='flex items-center gap-1'>
-                            <img src="/images/foods/spinach.png" alt="" srcset="" />
-                            <span className='nowrap'>Baby Spinach</span>
-                        </div>
-
-
-                        <div className='flex items-center gap-1'>
-                            <h5>+$2.30</h5>
-                            <input type="radio" name="radio" checked />
-                        </div>
-                    </div>
-                    <div className='flex justify-between items-center'>
-
-                        <div className='flex items-center gap-1'>
-                            <img src="/images/foods/mashroom.png" alt="" srcset="" />
-                            <span className='nowrap'>Masroom</span>
-                        </div>
-
-
-                        <div className='flex items-center gap-1'>
-                            <h5>+$2.30</h5>
-                            <input type="radio" name="radio" checked />
-                        </div>
-                    </div>
-                </form>
-
-                <PrimaryButton style={{
-                    bottom: '1rem',
-                    margin: 'auto',
-                    marginTop: '2rem'
-                }}>
-                    <CartIcon color="#fbfbfb" />
-                    <p style={{ fontWeight: 'bold' }}>  ADD To CART</p>
-
-                </PrimaryButton>
-
-            </div> */}
-
-        </React.Fragment>
+        </React.Fragment >
     );
 }
 
