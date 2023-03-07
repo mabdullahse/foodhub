@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { typeScale, primaryFont, typography } from "../utils";
 
-const Input = styled.input`
-  width: 316px;
+export const Input = styled.input`
+  min-width: 316px;
   height: 52px; 
   border: 1px solid ${typography[200]};
   padding-left: 8px;
@@ -18,7 +18,7 @@ const Input = styled.input`
   }
 `;
 
-const Label = styled.label`
+export const Label = styled.label`
   color: ${props => props.theme.textFieldLabelColor};
   font-size: ${typeScale.helperText};
   margin-bottom: 8px;
@@ -37,5 +37,13 @@ export const PasswordInput = ({ label, placeholder }) => (
     <Input id="password" type="password" placeholder={placeholder} />
   </div>
 );
+
+export const PhoneInput = ({ label, placeholder }) => (
+  <div style={{ display: "flex", flexDirection: "column", marginTop: "16px" }}>
+    <Label htmlFor="phone">{label}</Label>
+    <Input id="phone" type="number" placeholder={placeholder} />
+  </div>
+);
+
 
 
