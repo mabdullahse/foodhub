@@ -1,12 +1,14 @@
 
 
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled, { useTheme, keyframes } from 'styled-components';
+import { Link, } from "react-router-dom";
 
 import { typeScale } from '../utils/typography';
 import { SocialButton, EmailInput, PasswordInput, PrimaryButton } from '../components';
 import { GoogleIcon, FacebookIcon, } from "../assets";
 import { typography } from "../utils";
+
 
 
 const Wrapper = styled.div` 
@@ -57,7 +59,7 @@ function Login() {
 
     return (
         <Wrapper>
-            <img src="/images/header-circle.png" alt="" srcset="" />
+            <img src="/images/header-circle.png" className='w-100' alt="" srcset="" />
 
             <section className='child-margin p-1'>
                 <Header1>Login</Header1>
@@ -72,11 +74,13 @@ function Login() {
                     Forget password?
                 </p>
 
-                <PrimaryButton className='margin-inline-auto '>
-                    SIGN UP
-                </PrimaryButton>
+                <Link to="/home">
+                    <PrimaryButton className='margin-inline-auto w-80 justify-center'>
+                        SIGN IN
+                    </PrimaryButton>
+                </Link>
 
-                <div className='flex justify-center'>
+                <div className='flex justify-center mt-1'>
                     <p style={{ color: `${typography[200]}` }}>
                         Don't have an account?
                     </p>

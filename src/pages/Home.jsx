@@ -30,6 +30,7 @@ const Header1 = styled.h1`
 `;
 
 const Input = styled.input`
+  flex: 1;
   width: 316px;
   height: 52px; 
   border: 1px solid ${typography[200]};
@@ -214,7 +215,7 @@ function Home() {
                     to order</Header1>
 
                 <div className='flex gap-1 p-1'>
-                    <Input placeholder='Find or food or resturan...' />
+                    <Input placeholder='Find or food or resturan...' className='flex-1' />
                     <div>
                         <FilterButton>
                             <FilterIcon />

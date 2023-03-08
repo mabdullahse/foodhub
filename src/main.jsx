@@ -17,6 +17,7 @@ const AppContainer = styled.div`
   height: 100vh;
 `;
 
+// For mobile view
 const Wrapper = styled.div` 
 width: 100%;
 max-width: 480px;

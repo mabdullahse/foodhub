@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled, { useTheme } from 'styled-components';
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import { typeScale } from '../utils/typography';
 import { SocialButton, EmailInput, PasswordInput, PrimaryButton } from '../components';
@@ -55,27 +56,30 @@ function Signup() {
 
     return (
         <Wrapper>
-            <img src="/images/header-circle.png" alt="" srcset="" />
+            <img className='w-100' src="/images/header-circle.png" alt="" srcset="" />
 
             <section className='child-margin p-1'>
                 <Header1>Sign Up</Header1>
 
                 <div>
-                    <EmailInput label="Full name" placeholder="Muhammad Abdullah" />
+                    <EmailInput label="Full name" placeholder="Muhammad Abdullah" value="Example Name" />
                 </div>
 
                 <div>
-                    <EmailInput label="E-mail" placeholder="emmabostian@gmail.com" />
+                    <EmailInput label="E-mail" placeholder="example@gmail.com" value="example@gmail.com" />
                 </div>
                 <div>
-                    <PasswordInput label="Password" placeholder="****" />
+                    <PasswordInput label="Password" placeholder="****" value="123" />
                 </div>
 
-                <PrimaryButton className='margin-inline-auto '>
-                    SIGN UP
-                </PrimaryButton>
+                <Link to="/login" >
+                    <PrimaryButton className='margin-inline-auto w-80 justify-center' >
+                        SIGN UP
+                    </PrimaryButton>
+                </Link>
 
-                <div className='flex justify-center'>
+
+                <div className='flex justify-center mt-1'>
                     <p style={{ color: `${typography[200]}` }}>
                         Already have an account?
                     </p>

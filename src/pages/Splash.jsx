@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components'; 
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
+import { useNavigate } from "react-router-dom";
 
 
 const Wrapper = styled.div`
@@ -23,6 +24,15 @@ const WhiteLine = styled.p`
 `;
 
 function Splash() {
+    const navigate = useNavigate();
+
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            navigate("/welcome");
+        }, 1000);
+    });
     return (
         <Wrapper>
             <div>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { applyStyleModifiers } from "styled-components-modifiers";
 
 import { typeScale, typography, primaryFont } from "../utils";
@@ -82,6 +82,15 @@ export const Button = styled.button`
   }
 `;
 
+const buttonClick = keyframes`
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.1;
+    }
+`;
+
 export const PrimaryButton = styled(Button)`
   display: flex;
   gap: 1rem;
@@ -104,6 +113,13 @@ export const PrimaryButton = styled(Button)`
     color: ${props => props.theme.textOnDisabled};
     cursor: not-allowed;
   }
+  
+  transition: all 300ms ease-in;
+  &:hover {
+    scale: 1.1;
+    background-color: ${props => props.theme.primaryDarkColor};
+  }
+
   ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `;
 

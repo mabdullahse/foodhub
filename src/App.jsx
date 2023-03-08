@@ -4,7 +4,7 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import styled, { ThemeProvider } from "styled-components";
 
-import { GlobalStyle, defaultTheme, darkTheme } from "./utils";
+import { defaultTheme, darkTheme } from "./utils";
 import { EmailInput, PasswordInput } from './components';
 
 import { CartIcon, CloseIcon, BackIcon, DecrementIcon, IncrementIcon, FilterIcon, StarIcon, HeartIcon, GoogleIcon, FacebookIcon, LogoutIcon } from "./assets";
