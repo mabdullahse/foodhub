@@ -156,7 +156,7 @@ function FoodDetails() {
                 <div className='flex justify-between items-center'>
 
                     <div className='flex items-center gap-1'>
-                        <img src="/images/foods/peper.png" alt="" srcset="" />
+                        <img src="/images/foods/peper.png" alt=""  />
                         <span className='nowrap'>Pepper  Julienned</span>
                     </div>
 
@@ -170,7 +170,7 @@ function FoodDetails() {
                 <div className='flex justify-between items-center'>
 
                     <div className='flex items-center gap-1'>
-                        <img src="/images/foods/spinach.png" alt="" srcset="" />
+                        <img src="/images/foods/spinach.png" alt=""  />
                         <span className='nowrap'>Baby Spinach</span>
                     </div>
 
@@ -183,7 +183,7 @@ function FoodDetails() {
                 <div className='flex justify-between items-center'>
 
                     <div className='flex items-center gap-1'>
-                        <img src="/images/foods/mashroom.png" alt="" srcset="" />
+                        <img src="/images/foods/mashroom.png" alt=""  />
                         <span className='nowrap'>Masroom</span>
                     </div>
 

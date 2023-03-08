@@ -52,8 +52,9 @@ export const BUTTON_MODIFIERS = {
   `
 };
 
-export const Button = styled.button`
-
+export const Button = styled.button.attrs(props => ({
+  type: props.type || "button"
+}))`
   padding: 8px 20px;
   border-radius: 50px;
   min-width: 100px;

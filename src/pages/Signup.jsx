@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled, { useTheme, css } from 'styled-components';
 import { Link, Outlet, useNavigate } from "react-router-dom";
 
 import { typeScale } from '../utils/typography';
@@ -47,7 +47,6 @@ const LoginLabel = styled.h4`
 `;
 
 
-
 function Signup() {
 
     const theme = useTheme();
@@ -56,10 +55,10 @@ function Signup() {
 
     return (
         <Wrapper>
-            <img className='w-100' src="/images/header-circle.png" alt="" srcset="" />
+            <img className='w-100' src="/images/header-circle.png" alt="" />
 
             <section className='child-margin p-1'>
-                <Header1>Sign Up</Header1>
+                <Header1  >Sign Up</Header1>
 
                 <div>
                     <EmailInput label="Full name" placeholder="Muhammad Abdullah" value="Example Name" />
@@ -93,7 +92,7 @@ function Signup() {
                     <LoginLabel><span> sign in with</span></LoginLabel>
 
                     <div className='flex gap-1 justify-evenly mt-1'>
-                        <SocialButton type="google">
+                        <SocialButton as="a" href="https://www.youtube.com/watch?v=SgmNxE9lWcY&ab_channel=SlayingTheDragon" type="google">
                             <GoogleIcon />
                             <p style={{ fontWeight: 'bold' }}>Google</p>
                         </SocialButton>

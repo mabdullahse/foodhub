@@ -59,7 +59,7 @@ function Login() {
 
     return (
         <Wrapper>
-            <img src="/images/header-circle.png" className='w-100' alt="" srcset="" />
+            <img src="/images/header-circle.png" className='w-100' alt="" />
 
             <section className='child-margin p-1'>
                 <Header1>Login</Header1>
