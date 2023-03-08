@@ -1,20 +1,9 @@
 
-import React, { useState } from 'react';
-import styled, { useTheme } from 'styled-components';
-import { Link } from "react-router-dom";
-import SwipeableBottomSheet from 'react-swipeable-bottom-sheet';
+import React from 'react';
+import styled from 'styled-components';
+import { StarIcon, HeartUnfill } from "../assets";
 
-
-// import { typeScale } from '../utils/typography';
-import { typeScale, primaryFont, typography } from "../utils";
-
-import { StarIcon, HeartUnfill, FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, LocationIcon, BackIcon, CloseIcon } from "../assets";
-import Sidebar from './Sidebar';
-
-import { useSpring, animated } from 'react-spring';
-import AnimatedCard from './AnimatedCard';
-import { SocialButton, EmailInput, PhoneInput, PrimaryButton } from '../components';
-import { green } from '../utils/colors';
+import { PrimaryButton } from '../components';
 
 
 const Nav = styled.div` 
@@ -34,9 +23,7 @@ const Nav = styled.div`
             margin-inline: auto;
             border-radius: 9px;
         }
-    }
-    
- 
+    } 
 `;
 
 const Description = styled.div`

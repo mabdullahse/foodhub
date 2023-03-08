@@ -1,21 +1,9 @@
 
-import React, { useState } from 'react';
-import styled, { useTheme } from 'styled-components';
-import { Link } from "react-router-dom";
-import SwipeableBottomSheet from 'react-swipeable-bottom-sheet';
+import React from 'react';
+import styled from 'styled-components';
 
-
-// import { typeScale } from '../utils/typography';
-import { typeScale, primaryFont, typography } from "../utils";
-
-import { PlusIcon, MinusIcon, FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, LocationIcon, BackIcon, DotsMenu } from "../assets";
-import Sidebar from './Sidebar';
-
-import { useSpring, animated } from 'react-spring';
-import AnimatedCard from './AnimatedCard';
-import { TextInput, EmailInput, PhoneInput, PrimaryButton } from '../components';
-
-
+import { DotsMenu } from "../assets";
+import { TextInput } from '../components';
 
 const PageContainer = styled.div`
      padding: 1rem;

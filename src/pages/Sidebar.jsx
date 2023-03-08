@@ -1,11 +1,10 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
-import { animated, useSpring } from "react-spring";
+import styled from 'styled-components';
 
-// import { typeScale } from '../utils/typography';
-import { typeScale, primaryFont, typography } from "../utils";
 
-import { OrderIcon, MailIcon, HelpIcon, SettingsIcon, PaymentIcon, ProfileIcon, FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, CloseIcon, LogoutIcon } from "../assets";
+import { typography } from "../utils";
+
+import { OrderIcon, MailIcon, HelpIcon, SettingsIcon, PaymentIcon, ProfileIcon, CloseIcon, LogoutIcon } from "../assets";
 import { PrimaryButton } from '../components';
 
 

@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 
-// import { typeScale } from '../utils/typography';
 import { typeScale, primaryFont, typography } from "../utils";
 
 import { FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, LocationIcon } from "../assets";
 import Sidebar from './Sidebar';
 
-import { useSpring, animated } from 'react-spring';
-import AnimatedCard from './AnimatedCard';
+import { useSpring, animated } from 'react-spring'; 
 
 
 const SkipButton = styled.div`

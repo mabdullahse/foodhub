@@ -1,19 +1,8 @@
 
-import React, { useState } from 'react';
-import styled, { useTheme } from 'styled-components';
-import { Link } from "react-router-dom";
-import SwipeableBottomSheet from 'react-swipeable-bottom-sheet';
+import React from 'react';
+import styled from 'styled-components';
 
-
-// import { typeScale } from '../utils/typography';
-import { typeScale, primaryFont, typography } from "../utils";
-
-import { PlusIcon, MinusIcon, FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, LocationIcon, BackIcon, CloseIcon } from "../assets";
-import Sidebar from './Sidebar';
-
-import { useSpring, animated } from 'react-spring';
-import AnimatedCard from './AnimatedCard';
-import { SocialButton, EmailInput, PhoneInput, PrimaryButton } from '../components';
+import { PrimaryButton } from '../components';
 import { green } from './../utils/colors';
 
 
@@ -139,11 +128,11 @@ function Rating() {
                 <textarea></textarea>
 
                 <PrimaryButton className='margin-inline-auto w-100 justify-center'>
-                        Submit
-                  </PrimaryButton>
+                    Submit
+                </PrimaryButton>
             </Description>
 
-         
+
 
 
 

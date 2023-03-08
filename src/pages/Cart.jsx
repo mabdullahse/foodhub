@@ -1,18 +1,16 @@
 
 import React, { useState } from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import SwipeableBottomSheet from 'react-swipeable-bottom-sheet';
 
 
-// import { typeScale } from '../utils/typography';
-import { typeScale, primaryFont, typography } from "../utils";
+import {
+    primaryFont, typography
+} from "../utils";
 
-import { PlusIcon, MinusIcon, FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, LocationIcon, BackIcon, CloseIcon } from "../assets";
-import Sidebar from './Sidebar';
+import { CloseIcon } from "../assets";
 
-import { useSpring, animated } from 'react-spring';
-import AnimatedCard from './AnimatedCard';
 import { PrimaryButton } from '../components';
 
 

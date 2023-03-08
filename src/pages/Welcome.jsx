@@ -29,10 +29,7 @@ const Wrapper = styled.div`
     
     & div:nth-child(3) {
         grid-row-start: 4;
-    }
-    /* align-items: center; */
-    /* justify-content: space-evenly;
-    flex-direction: column; */
+    } 
 
     &:before {
     content: '';
