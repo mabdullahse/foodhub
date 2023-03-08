@@ -1,5 +1,13 @@
+
+
+
+
 .w-100 {
   width: 100%;
+}
+
+.w-80 {
+  width: 80%;
 }
 
 /** Flex  */
@@ -104,9 +112,8 @@
 }
 
 .mb-20 {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
- 
 
 .overflow-auto {
   overflow: auto;
@@ -114,6 +121,15 @@
 
 .transform-y-2 {
   transform: translateY(2rem);
+}
+
+/**  Position */
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
 }
 
 /** Others  */
@@ -139,5 +155,8 @@
   display: none;
 }
 
-
- 
+.input-img {
+  position: absolute;
+  bottom: 8px;
+  left: 10px; 
+}

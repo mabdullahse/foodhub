@@ -29,6 +29,8 @@ export * from "./icons/PaymentIcon";
 export * from "./icons/ProfileIcon";
 export * from "./icons/PlusIcon";
 export * from "./icons/MinusIcon";
+export * from "./icons/DotsMenu";
+
 
 
 

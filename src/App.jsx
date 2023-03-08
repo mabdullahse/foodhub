@@ -30,6 +30,9 @@ import Cart from "./pages/Cart";
 import Favorites from "./pages/Favorites";
 import Profile from "./pages/Profile";
 import Rating from "./pages/Rating";
+import Reviews from "./pages/Reviews";
+
+
 
 function PublicPage() {
   return <h3>Public</h3>;
@@ -67,6 +70,7 @@ export default function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/favorites" element={<Favorites />} /> 
           <Route path="/rating" element={<Rating />} />
+          <Route path="/reviews/:id" element={<Reviews />} />
           
           
           <Route path="/foodDetails/:id" element={<FoodDetails />} /> 
