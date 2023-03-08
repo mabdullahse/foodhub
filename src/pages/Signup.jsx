@@ -15,16 +15,12 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-rows: repeat(4, 1fr);
 
-    & div:first-child {
-        /* grid-row-start: 2; */
+    & div:first-child { 
     }
     
     & div:nth-child(3) {
         grid-row-start: 4;
-    }
-    /* align-items: center; */
-    /* justify-content: space-evenly;
-    flex-direction: column; */
+    } 
  
 `;
 
