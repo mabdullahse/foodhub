@@ -31,6 +31,7 @@ import Favorites from "./pages/Favorites";
 import Profile from "./pages/Profile";
 import Rating from "./pages/Rating";
 import Reviews from "./pages/Reviews";
+import ReviewResturent from "./pages/ReviewResturent";
 
 
 
@@ -71,6 +72,7 @@ export default function App() {
           <Route path="/favorites" element={<Favorites />} /> 
           <Route path="/rating" element={<Rating />} />
           <Route path="/reviews/:id" element={<Reviews />} />
+          <Route path="/reviews-resurnet/:id" element={<ReviewResturent />} />
           
           
           <Route path="/foodDetails/:id" element={<FoodDetails />} /> 

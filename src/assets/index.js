@@ -30,6 +30,7 @@ export * from "./icons/ProfileIcon";
 export * from "./icons/PlusIcon";
 export * from "./icons/MinusIcon";
 export * from "./icons/DotsMenu";
+export * from "./icons/HeartUnfill";
 
 
 
