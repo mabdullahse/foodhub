@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
-import { BackIcon, StarIcon } from "../assets";
+import { BackIcon, StarIcon, HeartIcon, CartIcon } from "../assets";
 
 import { PrimaryButton } from '../components';
 
@@ -97,7 +97,7 @@ function FoodDetails() {
             <CardBody url="/images/resturants/macdonalt.png">
 
                 <div>
-                    <Link to="/home"> <BackIcon /></Link>
+                    <Link to="/favorites"> <BackIcon /></Link>
 
                 </div>
 
@@ -121,7 +121,9 @@ function FoodDetails() {
                 </p>
 
                 <p>
-                    See Review
+                    <Link to="/reviews/1">
+                        See Review
+                    </Link>
                 </p>
             </ReviewSection>
 
@@ -156,7 +158,7 @@ function FoodDetails() {
                 <div className='flex justify-between items-center'>
 
                     <div className='flex items-center gap-1'>
-                        <img src="/images/foods/peper.png" alt=""  />
+                        <img src="/images/foods/peper.png" alt="" />
                         <span className='nowrap'>Pepper  Julienned</span>
                     </div>
 
@@ -170,7 +172,7 @@ function FoodDetails() {
                 <div className='flex justify-between items-center'>
 
                     <div className='flex items-center gap-1'>
-                        <img src="/images/foods/spinach.png" alt=""  />
+                        <img src="/images/foods/spinach.png" alt="" />
                         <span className='nowrap'>Baby Spinach</span>
                     </div>
 
@@ -183,7 +185,7 @@ function FoodDetails() {
                 <div className='flex justify-between items-center'>
 
                     <div className='flex items-center gap-1'>
-                        <img src="/images/foods/mashroom.png" alt=""  />
+                        <img src="/images/foods/mashroom.png" alt="" />
                         <span className='nowrap'>Masroom</span>
                     </div>
 
@@ -195,15 +197,19 @@ function FoodDetails() {
                 </div>
             </form>
 
-            <PrimaryButton style={{
-                bottom: '1rem',
-                margin: 'auto',
-                marginTop: '2rem'
-            }}>
-                <CartIcon color="#fbfbfb" />
-                <p style={{ fontWeight: 'bold' }}>  ADD To CART</p>
+            <Link to="/cart" className='w-100'>
 
-            </PrimaryButton>
+
+                <PrimaryButton style={{
+                    bottom: '1rem',
+                    margin: 'auto',
+                    marginTop: '2rem'
+                }}>
+                    <CartIcon color="#fbfbfb" />
+                    <p style={{ fontWeight: 'bold' }}>  ADD To CART</p>
+
+                </PrimaryButton>
+            </Link>
 
         </div>
     );

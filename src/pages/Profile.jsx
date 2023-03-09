@@ -1,7 +1,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link } from "react-router-dom";
 
 
 import { EmailInput, PhoneInput, PrimaryButton } from '../components';
@@ -64,8 +64,10 @@ function Profile() {
 
         <div  >
             <Nav className='p-1'>
-                <div>
-                    <img src='/images/icon/back.png' />
+                <div> 
+                    <Link to="/home">
+                        <img src='/images/icon/back.png' />
+                    </Link>
                 </div>
                 <div className='text-center' style={{ transform: 'translateX(-32px)' }}>
                     <img src='/images/man.png' />
@@ -88,9 +90,11 @@ function Profile() {
                 </div>
 
                 <div className='mt-1'>
-                    <PrimaryButton className='margin-inline-auto '>
-                        Submit
-                    </PrimaryButton>
+                    <Link to="/home">
+                        <PrimaryButton className='margin-inline-auto w-80 justify-center mt-1'>
+                            Submit
+                        </PrimaryButton>
+                    </Link>
                 </div>
 
             </div>

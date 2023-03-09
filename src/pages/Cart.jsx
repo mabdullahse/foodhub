@@ -294,11 +294,14 @@ function Cart() {
                         </div>
                     </ReciptSection>
 
-                    <div className='flex justify-center mt-1'>
-                        <PrimaryButton >
-                            CHECKOUT
-                        </PrimaryButton>
-                    </div>
+               
+
+                        <Link to="/reviews/1" className='w-100   '>
+                            <PrimaryButton className='justify-center mt-1 w-80 margin-inline-auto'>
+                                CHECKOUT
+                            </PrimaryButton>
+                        </Link>
+                   
                 </div>
 
 

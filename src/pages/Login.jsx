@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled, { useTheme, keyframes } from 'styled-components';
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { typeScale } from '../utils/typography';
 import { SocialButton, EmailInput, PasswordInput, PrimaryButton } from '../components';
@@ -96,14 +96,22 @@ function Login() {
                 }}>
                     <LoginLabel><span> sign in with</span></LoginLabel>
                     <div className='flex gap-1 justify-evenly mt-1'>
-                        <SocialButton type="google">
-                            <GoogleIcon />
-                            <p style={{ fontWeight: 'bold' }}>Google</p>
-                        </SocialButton>
-                        <SocialButton type="facebook">
-                            <FacebookIcon />
-                            <p style={{ fontWeight: 'bold' }}>Facebook</p>
-                        </SocialButton>
+
+                        <Link to="/home">
+                            <SocialButton type="google">
+                                <GoogleIcon />
+                                <p style={{ fontWeight: 'bold' }}>Google</p>
+                            </SocialButton>
+                        </Link>
+
+                        <Link to="/home">
+                            <SocialButton type="facebook">
+                                <FacebookIcon />
+                                <p style={{ fontWeight: 'bold' }}>Facebook</p>
+                            </SocialButton>
+                        </Link>
+
+
                     </div>
                 </div>
             </section>

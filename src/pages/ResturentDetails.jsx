@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
 import { PrimaryButton } from '../components';
-import { green } from './../utils/colors';
+import { green } from '../utils/colors';
 
 const Nav = styled.div` 
 

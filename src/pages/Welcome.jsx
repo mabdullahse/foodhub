@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 import { typeScale } from '../utils/typography';
 import { SocialButton } from "../components";
@@ -122,9 +123,12 @@ function Welcome() {
         <Wrapper>
 
             <div className='text-right'>
-                <SkipButton>
-                    Skip
-                </SkipButton>
+
+                <Link to="/signup">
+                    <SkipButton>
+                        Skip
+                    </SkipButton>
+                </Link>
             </div>
 
             <div>
@@ -137,19 +141,27 @@ function Welcome() {
                 <LoginLabel><span> sign in with</span></LoginLabel>
 
                 <div className='flex gap-1 justify-evenly'>
-                    <SocialButton type="google">
-                        <GoogleIcon />
-                        <p style={{ fontWeight: 'bold' }}>Google</p>
-                    </SocialButton>
-                    <SocialButton type="facebook">
-                        <FacebookIcon />
-                        <p style={{ fontWeight: 'bold' }}>Facebook</p>
-                    </SocialButton>
+
+                    <Link to="/home">
+                        <SocialButton type="google">
+                            <GoogleIcon />
+                            <p style={{ fontWeight: 'bold' }}>Google</p>
+                        </SocialButton>
+                    </Link>
+
+                    <Link to="/home">
+                        <SocialButton type="facebook">
+                            <FacebookIcon />
+                            <p style={{ fontWeight: 'bold' }}>Facebook</p>
+                        </SocialButton>
+                    </Link>
                 </div>
 
-                <ButtonPhone>
-                    Start with email or phone
-                </ButtonPhone>
+                <Link to="/signup" className='text-center'>
+                    <ButtonPhone>
+                        Start with email or phone
+                    </ButtonPhone>
+                </Link>
 
 
                 <div className='text-white flex gap-1 justify-center'>
@@ -157,7 +169,9 @@ function Welcome() {
                         Already have an account?
                     </p>
                     <p >
-                        Sign In
+                        <Link to="/login">
+                            Sign In
+                        </Link>
                     </p>
                 </div>
 

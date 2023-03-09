@@ -1,8 +1,9 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { StarIcon, HeartUnfill } from "../assets";
+import { Link } from "react-router-dom";
 
+import { StarIcon, HeartUnfill } from "../assets"; 
 import { PrimaryButton } from '../components';
 
 
@@ -84,7 +85,10 @@ function ReviewResturent() {
         <div className='p-1'>
             <Nav >
                 <div>
-                    <img src='/images/icon/back.png' />
+
+                    <Link to="/home" className='w-100   '>
+                        <img src='/images/icon/back.png' />
+                    </Link>
                 </div>
 
 
@@ -106,9 +110,11 @@ function ReviewResturent() {
                 </div>
                 <textarea></textarea>
 
-                <PrimaryButton className='margin-inline-auto w-80 justify-center'>
-                    Submit
-                </PrimaryButton>
+                <Link to="/home" className='w-100'>
+                    <PrimaryButton className='margin-inline-auto w-80 justify-center'>
+                        Submit
+                    </PrimaryButton>
+                </Link>
             </Description>
 
 

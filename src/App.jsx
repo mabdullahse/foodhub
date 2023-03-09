@@ -74,7 +74,6 @@ export default function App() {
           <Route path="/reviews/:id" element={<Reviews />} />
           <Route path="/reviews-resurnet/:id" element={<ReviewResturent />} />
           
-          
           <Route path="/foodDetails/:id" element={<FoodDetails />} /> 
           <Route path="/testing" element={<Testing />} />
 

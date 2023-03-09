@@ -1,9 +1,13 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
 
 import { DotsMenu } from "../assets";
-import { TextInput } from '../components';
+import { TextInput, PrimaryButton } from '../components';
+
+
 
 const PageContainer = styled.div`
      padding: 1rem;
@@ -82,7 +86,9 @@ function Reviews() {
         <PageContainer>
             <Nav >
                 <div>
-                    <img src='/images/icon/back.png' />
+                    <Link to="/cart">
+                        <img src='/images/icon/back.png' />
+                    </Link>
                 </div>
                 <div className='text-center'  >
                     <h4>Muhammad Abdullah</h4>
@@ -90,9 +96,21 @@ function Reviews() {
 
             </Nav>
 
-            <TextInput label="" placeholder="Write your review..."
-                className="  margin-inline-auto "
-                icon="/images/man.png" />
+            <div className="flex items-center">
+
+                <TextInput label="" placeholder="Write your review..."
+                    className="  margin-inline-auto "
+                    icon="/images/man.png" />
+
+                <Link to="/rating" className='w-100   '>
+
+                    <PrimaryButton className='justify-center mt-1 w-80 margin-inline-auto'>
+                        Add
+                    </PrimaryButton>
+                </Link>
+
+            </div>
+
 
 
             <div>

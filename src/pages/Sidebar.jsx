@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link } from "react-router-dom";
 
 import { typography } from "../utils";
 
@@ -29,7 +29,7 @@ const ProfileMenu = styled.div`
     justify-content: center;
     align-items: flex-start;
 
-    & > img {
+    img {
         width: 5rem;
         border-radius: 50px;
         align-self: flex-start;
@@ -62,10 +62,14 @@ const LiItem = styled.li`
     display: flex;
     gap: 1rem;
     
+    a {
+        display: flex;
+        gap: 1rem;
+    }
 
-& > svg {
-    max-width: 1.5rem;
-}
+     svg {
+        max-width: 1.5rem;
+    }
 `;
 
 const SkipButton = styled.div`
@@ -102,19 +106,25 @@ function Sidebar({ toggleSidebar, showModal }) {
                     </SkipButton>
                 </div>
 
-                <img src="/images/man.png" alt="Customer profile" />
+                <Link to="/profile">
+                    <img src="/images/man.png" alt="Customer profile" />
+                </Link>
                 <h4>Muhammmad Abdullah</h4>
                 <p>mabdullah.se@gmail.com</p>
             </ProfileMenu>
             <Nav>
                 <UlList>
                     <LiItem>
-                        <OrderIcon />
-                        <p>My Order</p>
+                        <Link to="/cart" className='w-100'>
+                            <OrderIcon />
+                            <p>My Order</p>
+                        </Link>
                     </LiItem>
                     <LiItem>
-                        <ProfileIcon />
-                        <p>My Profile</p>
+                        <Link to="/profile" className='w-100'>
+                            <ProfileIcon />
+                            <p>My Profile</p>
+                        </Link>
                     </LiItem>
                     <LiItem>
                         <MailIcon />
@@ -139,16 +149,17 @@ function Sidebar({ toggleSidebar, showModal }) {
                 </UlList>
             </Nav>
 
-            <PrimaryButton style={{
-                position: 'absolute',
-                bottom: '1rem'
-            }}>
-                <LogoutIcon />
-                <p style={{ fontWeight: 'bold' }}>  Log Out</p>
+            <Link to="/profile">
+                <PrimaryButton style={{
+                    position: 'absolute',
+                    bottom: '1rem'
+                }}>
+                    <LogoutIcon />
+                    <p style={{ fontWeight: 'bold' }}>  Log Out</p>
+                </PrimaryButton>
+            </Link>
 
-            </PrimaryButton>
-
-        </Aside>
+        </Aside >
 
     );
 }

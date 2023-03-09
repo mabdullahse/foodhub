@@ -160,7 +160,7 @@ function Favorites() {
 
             <div className='flex flex-col gap-1 mt-1'>
 
-                <FavFoods>
+                <FavFoods  as={Link}  to="/foodDetails/1"  >
 
                     <FoodImage url="/images/foods/chicken.png ">
                         <div>
@@ -186,7 +186,7 @@ function Favorites() {
                 </FavFoods>
 
 
-                <FavFoods>
+                <FavFoods as={Link}  to="/foodDetails/2" >
 
                     <FoodImage url="/images/foods/palak.png ">
                         <div>
@@ -210,7 +210,8 @@ function Favorites() {
                     </FoodDes>
 
                 </FavFoods>
-                <FavFoods>
+
+                 <FavFoods as={Link}  to="/foodDetails/3" >
 
                     <FoodImage url="/images/foods/pizza.png ">
                         <div>

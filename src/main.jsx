@@ -20,11 +20,15 @@ const AppContainer = styled.div`
 // For mobile view
 const Wrapper = styled.div` 
 width: 100%;
-max-width: 480px;
-/* min-height: 680px; */
+max-width: 380px;
+min-height: 680px;
 margin: auto;
 height: 100vh;
-height: 100svh;
+/* height: 100svh; */
+
+ 
+box-shadow: 0 0 2px rgba(15, 15, 15, 0.28);
+border-radius: 19px;
 `;
 
 

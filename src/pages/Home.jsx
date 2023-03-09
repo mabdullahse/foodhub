@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
+import { Link } from "react-router-dom";
 
 import { typeScale, primaryFont, typography } from "../utils";
 
 import { FilterIcon, TickMark, BikeIcon, TimerIcon, HeartIcon, CartIcon, AlertIcon, TrendingIcon, LocationIcon } from "../assets";
 import Sidebar from './Sidebar';
 
-import { useSpring, animated } from 'react-spring'; 
+import { useSpring, animated } from 'react-spring';
 
 
 const SkipButton = styled.div`
@@ -55,7 +56,7 @@ const Ellipse = styled.div`
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
    
 
-    & > img {
+     img {
         /* border: 1px solid red; */
         margin-inline: auto;
         background-color:  ${props => props.theme.primaryWhite};
@@ -63,7 +64,7 @@ const Ellipse = styled.div`
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
-    & > p {
+     p {
         /* border: 1px solid red; */
         margin-inline: auto;
         color:  ${props => props.active ? props.theme.primaryWhite : '#67666D'};
@@ -95,7 +96,7 @@ const CardImageSection = styled.div`
 
  height: 7rem;
  overflow: hidden;
- background-image:  url("/images/welcome-bg.png");
+ background-image:  url( ${props => props.url});
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center center; 
@@ -109,7 +110,6 @@ const CardBody = styled.div`
     margin-bottom: 0.5rem;
     }
 `;
-
 
 const CategoryCardType = styled.div`
     
@@ -204,7 +204,9 @@ function Home() {
                     </div>
 
                     <div>
-                        <img src="/images/man.png" alt="profile-owner" />
+                        <Link to="/profile">
+                            <img src="/images/man.png" alt="profile-owner" />
+                        </Link>
 
                     </div>
 
@@ -225,28 +227,38 @@ function Home() {
 
                 <section className='flex gap-1 overflow-auto p-bloack-1 p-inline-1'>
 
-                    <Ellipse active="true">
-                        <img src="/images/category/hamburger.png" alt="hamburger" />
-                        <p>Burder</p>
-                    </Ellipse>
-
-                    <Ellipse  >
-                        <img src="/images/category/butter.png" alt="butter" />
-                        <p>Butter</p>
+                    <Ellipse active="favourites">
+                        <Link to="/favorites">
+                            <img src="/images/category/hamburger.png" alt="hamburger" />
+                            <p>Burder</p>
+                        </Link>
                     </Ellipse>
 
                     <Ellipse>
-                        <img src="/images/category/sandwich.png" alt="Sandwich" />
-                        <p>Sandwich</p>
-                    </Ellipse>
-                    <Ellipse>
-                        <img src="/images/category/shrimp.png" alt="shrimp" />
-                        <p>Shrimp</p>
+                        <Link to="/favorites">
+                            <img src="/images/category/butter.png" alt="butter" />
+                            <p>Butter</p>
+                        </Link>
                     </Ellipse>
 
                     <Ellipse>
-                        <img src="/images/category/donat.png" alt="donat" />
-                        <p>Donat</p>
+                        <Link to="/favorites">
+                            <img src="/images/category/sandwich.png" alt="Sandwich" />
+                            <p>Sandwich</p>
+                        </Link>
+                    </Ellipse>
+                    <Ellipse>
+                        <Link to="/favorites">
+                            <img src="/images/category/shrimp.png" alt="shrimp" />
+                            <p>Shrimp</p>
+                        </Link>
+                    </Ellipse>
+
+                    <Ellipse>
+                        <Link to="/favorites">
+                            <img src="/images/category/donat.png" alt="donat" />
+                            <p>Donat</p>
+                        </Link>
                     </Ellipse>
                 </section>
 
@@ -265,10 +277,12 @@ function Home() {
 
                 <section className='flex gap-1 overflow-auto h-10 p-b-1 '>
 
-                    <ResturentCard >
-                        <CardImageSection>
+                    <ResturentCard as={Link} to="/reviews-resurnet/1" >
+                        <CardImageSection url="/images/resturants/macdonalt.png">
                         </CardImageSection>
-                        <CardBody url="/images/resturants/macdonalt.png">
+
+
+                        < CardBody  >
                             <div className='flex gap-1 items-center'>
                                 <h3>
                                     McDonald's
@@ -300,13 +314,13 @@ function Home() {
                     </ResturentCard>
 
 
-                    <ResturentCard >
-                        <CardImageSection>
+                    <ResturentCard as={Link} to="/reviews-resurnet/1" >
+                        <CardImageSection url="/images/resturants/macdonalt.png">
                         </CardImageSection>
-                        <CardBody url="/images/resturants/macdonalt.png">
+                        <CardBody >
                             <div className='flex gap-1 items-center'>
                                 <h3>
-                                    McDonald's
+                                    Haveli Restaurant
                                 </h3>
                                 <div style={{ maxWidth: '1rem' }}>
                                     <TickMark color="#029094" ></TickMark>
