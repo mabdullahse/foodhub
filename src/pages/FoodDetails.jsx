@@ -94,7 +94,7 @@ const FoodQuantity = styled.div`
 function FoodDetails() {
     return (
         <div className='p-1'>
-            <CardBody url="/images/resturants/macdonalt.png">
+            <CardBody url="/images/resturants/macdonalt.jpg">
 
                 <div>
                     <Link to="/favorites"> <BackIcon /></Link>

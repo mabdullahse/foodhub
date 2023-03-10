@@ -32,6 +32,8 @@ import Profile from "./pages/Profile";
 import Rating from "./pages/Rating";
 import Reviews from "./pages/Reviews";
 import ReviewResturent from "./pages/ReviewResturent";
+import ResturentDetails from "./pages/ResturentDetails";
+import MyComponent from "./components/MapComponent";
 
 
 
@@ -69,14 +71,18 @@ export default function App() {
           <Route path="/sidebar" element={<Sidebar />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/favorites" element={<Favorites />} /> 
+          <Route path="/favorites" element={<Favorites />} />
           <Route path="/rating" element={<Rating />} />
           <Route path="/reviews/:id" element={<Reviews />} />
-          <Route path="/reviews-resurnet/:id" element={<ReviewResturent />} />
-          
-          <Route path="/foodDetails/:id" element={<FoodDetails />} /> 
-          <Route path="/testing" element={<Testing />} />
 
+          <Route path="/reviews-resurnet/:id" element={<ReviewResturent />} />
+          <Route path="/foodDetails/:id" element={<FoodDetails />} />
+          <Route path="/resturent-details/:id" element={<ResturentDetails />} />
+
+
+
+
+          <Route path="/testing" element={<Testing />} />
 
           <Route element={<Layout />}>
             <Route path="/login" element={<LoginPage />} />

@@ -15,7 +15,7 @@ export const MinusIcon = ({ color = "#FE724C" }) => (
     <g filter="url(#filter0_d_814_6299)">
       <rect x="31.2056" y="10.5" width="29.5981" height="29.5981" rx="14.7991" stroke={color} />
     </g>
-    <line x1="41.3555" y1="25.0398" x2="50.6548" y2="25.0398" stroke={color} stroke-width="1.5" stroke-linecap="round" />
+    <line x1="41.3555" y1="25.0398" x2="50.6548" y2="25.0398" stroke={color} strokeWidth="1.5" stroke-linecap="round" />
     <defs>
       <filter id="filter0_d_814_6299" x="0.705566" y="0" width="90.5981" height="90.5981" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix" />

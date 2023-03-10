@@ -15,8 +15,8 @@ export const PlusIcon = ({ color = "#FE724C" }) => (
     <g filter="url(#filter0_d_814_6294)">
       <rect x="30" y="22" width="30.5981" height="30.5981" rx="15.2991" fill={color} />
     </g>
-    <line x1="45.5586" y1="32.6494" x2="45.5586" y2="41.9488" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-    <line x1="40.6499" y1="37.0398" x2="49.9492" y2="37.0398" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="45.5586" y1="32.6494" x2="45.5586" y2="41.9488" stroke="white" strokeWidth="1.5" stroke-linecap="round" />
+    <line x1="40.6499" y1="37.0398" x2="49.9492" y2="37.0398" stroke="white" strokeWidth="1.5" stroke-linecap="round" />
     <defs>
       <filter id="filter0_d_814_6294" x="0" y="0" width="90.5981" height="90.5981" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix" />

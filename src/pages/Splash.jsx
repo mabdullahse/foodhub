@@ -51,7 +51,7 @@ function Splash() {
     useEffect(() => {
         setTimeout(() => {
             navigate("/welcome");
-        }, 1000);
+        }, 5000);
     });
     return (
         <Wrapper>

@@ -277,8 +277,8 @@ function Home() {
 
                 <section className='flex gap-1 overflow-auto h-10 p-b-1 '>
 
-                    <ResturentCard as={Link} to="/reviews-resurnet/1" >
-                        <CardImageSection url="/images/resturants/macdonalt.png">
+                    <ResturentCard as={Link} to="/resturent-details/1" >
+                        <CardImageSection url="/images/resturants/macdonalt.jpg">
                         </CardImageSection>
 
 
@@ -314,8 +314,8 @@ function Home() {
                     </ResturentCard>
 
 
-                    <ResturentCard as={Link} to="/reviews-resurnet/1" >
-                        <CardImageSection url="/images/resturants/macdonalt.png">
+                    <ResturentCard as={Link} to="/resturent-details/1" >
+                        <CardImageSection url="/images/resturants/haveli.jpg">
                         </CardImageSection>
                         <CardBody >
                             <div className='flex gap-1 items-center'>

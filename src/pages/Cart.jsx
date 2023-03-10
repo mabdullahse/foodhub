@@ -186,7 +186,7 @@ function Cart() {
                 <div className='flex flex-col gap-1' >
                     <div className='flex gap-0-5' style={{ 'boxShadow': 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px' }}>
 
-                        <ItemImage url="/images/resturants/macdonalt.png">
+                        <ItemImage url="/images/foods/chicken.png">
 
                         </ItemImage>
 
@@ -215,7 +215,7 @@ function Cart() {
                     </div>
                     <div className='flex gap-0-5' style={{ 'boxShadow': 'rgba(0, 0, 0, 0.05) 0px 0px 0px 1px' }}>
 
-                        <ItemImage url="/images/resturants/macdonalt.png">
+                        <ItemImage url="/images/foods/peper.png">
 
                         </ItemImage>
 

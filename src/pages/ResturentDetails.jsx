@@ -1,10 +1,12 @@
 
-import React from 'react';
+import React, { useRef, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
-import { PrimaryButton } from '../components';
+
+import { FoodList, PrimaryButton } from '../components';
 import { green } from '../utils/colors';
+import MapComponent from '../components/MapComponent';
 
 const Nav = styled.div` 
 
@@ -28,8 +30,9 @@ const Nav = styled.div`
     position: relative;
     height: 150px;
     width: 100%;
-    background: url("/images/foods/pizza.png");
+    background: url("/images/resturants/macdonalt.jpg");
     background-size: 100% 100%;
+    background-position: center;
     margin-bottom: 42px;
     background-size: cover;
 
@@ -55,7 +58,7 @@ const Description = styled.div`
     text-align: center;
 
     & > * {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     & > *:nth-child(2) { 
@@ -94,31 +97,38 @@ const Description = styled.div`
 
 
 
-function Rating() {
+
+
+
+
+function ResturentDetails() {
+
+
+
+
     return (
 
         <div className='p-1 position-relative'>
             <Nav >
-                <div> 
-                    <Link to="/reviews/1" className='w-100   '>
+                <div>
+                    <Link to="/home" className='w-100   '>
                         <img src='/images/icon/back.png' />
                     </Link>
                 </div>
 
                 <div className='banner'  >
-                    <img class="profile" src='/images/icon/food-rating.png' />
+                    <img className="profile" src='/images/icon/food-rating.png' />
 
 
                 </div>
             </Nav>
 
             <Description>
-                <h2>Muhammad Abdullah</h2>
+                <h2>McDonald's</h2>
                 <p>4102  Pretty View Lanenda</p>
                 <p>Order Delivered</p>
 
-                <h2>Please Rate Delivery Service</h2>
-                <p>Good</p>
+
                 <div className='flex g-1 justify-center'>
                     <img src='/images/icon/star.png' />
                     <img src='/images/icon/star.png' />
@@ -126,21 +136,26 @@ function Rating() {
                     <img src='/images/icon/star.png' />
                     <img src='/images/icon/star.png' />
                 </div>
-                <textarea></textarea>
 
-                <Link to="/reviews/1" className='w-100   '>
-                    <PrimaryButton className='margin-inline-auto w-100 justify-center'>
-                        Submit
-                    </PrimaryButton>
-                </Link>
+
+
             </Description>
 
+            <div >
+                <h3>Our Places</h3>
+                <div style={{ height: '18rem', width: '100%' }}>
+                    <MapComponent />
+                </div>
+            </div>
 
-
+            <div className='pt-2'>
+                <h3 className='p-b-1'>Our Famous</h3>
+                <FoodList />
+            </div>
 
 
         </div>
     );
 }
 
-export default Rating;
+export default ResturentDetails;
