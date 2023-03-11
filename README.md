@@ -29,17 +29,17 @@ VITE_GOOGLE_MAP_API="YOUT KEY will go here"
 
 ### Mockups
 
-<img src="./public/git/a.png" alt="Mockup 1" width="100" height="200"/>
-<img src="./public/git/2.png" alt="Mockup 2" width="100" height="200"/> 
-<img src="./public/git/3.png" alt="Mockup 3" width="100" height="200"/> 
-<img src="./public/git/4.png" alt="Mockup 4" width="100" height="200"/> 
-<img src="./public/git/5.png" alt="Mockup 5" width="100" height="200"/> 
-<img src="./public/git/6.png" alt="Mockup 6" width="100" height="200"/> 
-<img src="./public/git/7.png" alt="Mockup 7" width="100" height="200"/> 
-<img src="./public/git/8.png" alt="Mockup 8" width="100" height="200"/> 
-<img src="./public/git/9.png" alt="Mockup 9" width="100" height="200"/> 
-<img src="./public/git/10.png" alt="Mockup 10" width="100" height="200"/> 
-<img src="./public/git/11.png" alt="Mockup 11" width="100" height="200"/> 
+<img src="./public/git/a.png" alt="Mockup 1" width="100" height="200" style="display:inline-block;"/>
+<img src="./public/git/2.png" alt="Mockup 2" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/3.png" alt="Mockup 3" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/4.png" alt="Mockup 4" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/5.png" alt="Mockup 5" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/6.png" alt="Mockup 6" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/7.png" alt="Mockup 7" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/8.png" alt="Mockup 8" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/9.png" alt="Mockup 9" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/10.png" alt="Mockup 10" width="100" height="200" style="display:inline-block;"/> 
+<img src="./public/git/11.png" alt="Mockup 11" width="100" height="200" style="display:inline-block;"/> 
 
 
  
