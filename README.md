@@ -20,7 +20,8 @@ VITE_GOOGLE_MAP_API="YOUT KEY will go here"
 
 ### Mocks's
 
- ![](public/images/a (1).png)
+
+ ![Mockup 1](.foodhub/images/a (1).png)
 
  
 
