@@ -29,6 +29,7 @@ VITE_GOOGLE_MAP_API="YOUT KEY will go here"
 
 ### Mockups
 
+<div>
 <img src="./public/git/a.png" alt="Mockup 1" width="100" height="200" style="display:inline-block;"/>
 <img src="./public/git/2.png" alt="Mockup 2" width="100" height="200" style="display:inline-block;"/> 
 <img src="./public/git/3.png" alt="Mockup 3" width="100" height="200" style="display:inline-block;"/> 
@@ -41,6 +42,7 @@ VITE_GOOGLE_MAP_API="YOUT KEY will go here"
 <img src="./public/git/10.png" alt="Mockup 10" width="100" height="200" style="display:inline-block;"/> 
 <img src="./public/git/11.png" alt="Mockup 11" width="100" height="200" style="display:inline-block;"/> 
 
+</div>
 
  
  
