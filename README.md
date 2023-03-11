@@ -21,7 +21,7 @@ VITE_GOOGLE_MAP_API="YOUT KEY will go here"
 ### Mockups
 
 
- ![Mockup 1](./foodhub/git/a.png)
+ ![Mockup 1](./public/git/a.png)
 
  
 
