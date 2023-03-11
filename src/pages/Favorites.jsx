@@ -83,7 +83,9 @@ function Favorites() {
 
             </ToggleButton>
 
-            <FoodList />
+            <div className='mt-1'>
+                <FoodList />
+            </div>
 
 
 
