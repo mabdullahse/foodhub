@@ -29,6 +29,8 @@ VITE_GOOGLE_MAP_API="YOUT KEY will go here"
 
 ### Mockups
 
+<img src="./public/git/a.png" alt="Mockup 1" width="100" height="200"/>
+
 
  ![Mockup 1](./public/git/a.png){:height="100px" width="100px"}
  ![Mockup 2](./public/git/2.png){:height="100px" width="100px"}
