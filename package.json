@@ -1,12 +1,18 @@
 {
   "name": "foodhub",
+  "homepage": "http://mabdullahse.github.io/foodhub",
+  "version": "1.0.0",
+  "description": "Exploring Delicious Recipes from Around the World | Demo app porfolior",
+  "author": "Muhammad Abdullah <mabdullah.se@gmail.com>",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.18.1",
@@ -22,6 +28,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^5.0.0",
     "vite": "^4.1.0"
   }
 }
